@@ -1,0 +1,22 @@
+manager:
+  environment:
+    MONGO_ROLE: manager
+    MONGO_REPSET: ${repset_name}
+  labels:
+    io.rancher.container.pull_image: always
+    mongo.role: manager
+  tty: true
+  image: cf-registry.innotechapp.com/rancher-mongo:0.0.2-18
+  links:
+  - 'repset:'
+  mem_limit: 134217728
+repset:
+  environment:
+    MONGO_ROLE: repset
+    MONGO_REPSET: ${repset_name}
+  labels:
+    io.rancher.container.pull_image: always
+    mongo.role: repset
+  tty: true
+  image: cf-registry.innotechapp.com/rancher-mongo:0.0.2-18
+  stdin_open: true

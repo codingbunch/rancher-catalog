@@ -1,0 +1,19 @@
+registry:
+  image: nginx:1.9
+  ports:
+    - 80:80
+    - 443:443
+  links:
+    - docker-registry:docker-registry
+  volumes:
+    - ${config_volume}:/etc/nginx/conf.d
+    - ${static_volume}:/www
+
+docker-registry:
+  image: registry:2.2.1
+  ports:
+    - 5000:5000
+  environment:
+    REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+  volumes:
+    - ${data_volume}:/data

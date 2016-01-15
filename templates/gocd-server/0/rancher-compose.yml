@@ -1,0 +1,41 @@
+.catalog:
+  name: gocd-server
+  version: 15.3.1-rancher1
+  description: |
+    (Experimental) Gocd server.
+  minimum_rancher_version: v0.47.0
+  uuid: goserver-0
+  questions:
+    - variable: "mem_initial"
+      description: "Initial java memory in Mb"
+      label: "Initial memory:"
+      required: true
+      default: 512
+      type: "int"
+    - variable: "mem_max"
+      description: "Max java memory in Mb"
+      label: "Max memory:"
+      required: true
+      default: 1024
+      type: "int"
+    - variable: "perm_initial"
+      description: "Initial permgen memory in Mb"
+      label: "Initial permgen memory:"
+      required: true
+      default: 128
+      type: "int"
+    - variable: "perm_max"
+      description: "Max permgen memory in Mb"
+      label: "Max permgen memory:"
+      required: true
+      default: 256
+      type: "int"
+gocd-server:
+  scale: 1
+  health_check:
+    port: 8153
+    interval: 5000
+    unhealthy_threshold: 5
+    request_line: GET /go/agents HTTP/1.0
+    healthy_threshold: 2
+    response_timeout: 5000

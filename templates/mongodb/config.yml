@@ -1,0 +1,8 @@
+name: Mongodb
+description: |
+  (Experimental) mongodb replicaset
+version: 0.0.1-rancher1
+category: clustering
+release by: Raul Sanchez
+requires: rancher-0.47.0
+license: 

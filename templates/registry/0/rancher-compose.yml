@@ -1,0 +1,43 @@
+.catalog:
+  name: docker-registry
+  version: 2.2.1-rancher1
+  description: |
+    Docker registry
+  minimum_rancher_version: v0.47.0
+  uuid: registry-0
+  questions:
+    - variable: "data_volume"
+      description: "Host volume to save registry images"
+      label: "Data volume:"
+      required: true
+      default: "/zpool-docker/volumes/registry-data" 
+      type: "string"
+    - variable: "static_volume"
+      description: "Host volume to save static nginx content"
+      label: "Static volume:"
+      required: true
+      default: "/zpool-docker/volumes/registry-www"
+      type: "string"
+    - variable: "config_volume"
+      description: "Host volume to save nginx configuration"
+      label: "Config volume:"
+      required: true
+      default: "/zpool-docker/volumes/registry-nginx"
+      type: "string"
+registry:
+  health_check:
+    port: 80
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: GET / HTTP/1.0
+    healthy_threshold: 2
+    response_timeout: 5000
+docker-registry:
+  health_check:
+    port: 5000
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: GET / HTTP/1.0
+    healthy_threshold: 2
+    response_timeout: 5000
+

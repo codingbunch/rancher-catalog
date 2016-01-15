@@ -1,0 +1,8 @@
+name: gocd-server
+description: |
+  (Experimental) Gocd server
+version: 15.3.1-rancher1
+category: "Continuous Integration"
+release by: Raul Sanchez
+requires: rancher-0.47.0
+license: 
