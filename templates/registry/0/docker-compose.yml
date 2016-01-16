@@ -1,5 +1,5 @@
 registry:
-  image: rawmind/rancher-nginx:0.0.1
+  image: rawmind/rancher-nginx:0.0.1-1
   ports:
     - 80:80
   links:
