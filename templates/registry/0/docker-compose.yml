@@ -1,8 +1,7 @@
 registry:
-  image: nginx:1.9
+  image: rawmind0/rancher-nginx:0.0.1
   ports:
     - 80:80
-  command: bash -c "sleep 5 && nginx"
   links:
     - docker-registry:docker-registry
   volumes:
