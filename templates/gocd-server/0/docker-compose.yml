@@ -3,7 +3,7 @@ gocd-server:
     io.rancher.container.pull_image: always
     gocd.role: server
   tty: true
-  image: cf-registry.innotechapp.com/rancher-goserver:15.3.1-1
+  image: rawmind/rancher-goserver:15.3.1-1
   volumes:
   - /opt/go-server/work
   environment:

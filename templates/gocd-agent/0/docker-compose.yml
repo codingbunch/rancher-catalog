@@ -1,9 +1,9 @@
 gocd-agent:
   labels:
     io.rancher.container.pull_image: always
-    gocd.role: server
+    gocd.role: agent
   tty: true
-  image: cf-registry.innotechapp.com/rancher-goagent:15.3.1-2
+  image: rawmind/rancher-goagent:15.3.1-2
   environment:
   - AGENT_MEM=${mem_initial}m
   - AGENT_MAX_MEM=${mem_max}m

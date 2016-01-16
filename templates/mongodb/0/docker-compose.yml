@@ -6,7 +6,7 @@ manager:
     io.rancher.container.pull_image: always
     mongo.role: manager
   tty: true
-  image: cf-registry.innotechapp.com/rancher-mongo:0.0.2-18
+  image: rawmind/rancher-mongo:0.0.2-18
   links:
   - 'repset:'
   mem_limit: 134217728
@@ -18,5 +18,5 @@ repset:
     io.rancher.container.pull_image: always
     mongo.role: repset
   tty: true
-  image: cf-registry.innotechapp.com/rancher-mongo:0.0.2-18
+  image: rawmind/rancher-mongo:0.0.2-18
   stdin_open: true
