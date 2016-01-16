@@ -1,7 +1,5 @@
 registry:
   image: rawmind/rancher-nginx:0.0.1-1
-  ports:
-    - 80:80
   links:
     - docker-registry:docker-registry
   volumes:
@@ -10,8 +8,6 @@ registry:
 
 docker-registry:
   image: registry:2.2.1
-  ports:
-    - 5000:5000
   environment:
     REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
   volumes:
