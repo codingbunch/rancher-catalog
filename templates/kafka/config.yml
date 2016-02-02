@@ -3,6 +3,6 @@ description: |
   (Experimental) Kafka cluster
 version: 0.8.2-rancher1
 category: clustering
-release by: Raul Sanchez
-requires: rancher-0.47.0
+maintainer: "Raul Sanchez <rawmind@gmail.com>"
+minimum_rancher_version: rancher-0.56.0
 license: 
