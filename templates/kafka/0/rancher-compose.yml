@@ -3,7 +3,7 @@
   version: 0.8.2-rancher1
   description: |
     (Experimental) Apache Kafka cluster.
-  minimum_rancher_version: v0.47.0
+  minimum_rancher_version: v0.56.0
   uuid: kafka-0
   questions:
     - variable: "zk_scale"
@@ -34,13 +34,13 @@
       description: "Interval to poll/apply configuration changes. 0 to disable, reconfiguration will be done when you restart zk nodes"
       label: "Zk Interval (s):"
       required: true
-      default: 120
+      default: 60
       type: "int"
     - variable: "kafka_interval"
       description: "Interval to poll/apply configuration changes. 0 to disable, reconfiguration will be done when you restart broker nodes"
       label: "Kafka Interval (s):"
       required: true
-      default: 120 
+      default: 60 
       type: "int"
 broker:
   scale: ${kafka_scale}

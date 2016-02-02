@@ -1,6 +1,6 @@
 zk:
   tty: true
-  image: rawmind/rancher-zk:3.4.6
+  image: rawmind/rancher-zk:3.4.6-1
   volumes:
   - /opt/zookeeper/data
   environment:
@@ -8,7 +8,7 @@ zk:
   - CONFD_INTERVAL=${zk_interval}
 broker:
   tty: true
-  image: rawmind/rancher-kafka:0.8.2-3
+  image: rawmind/rancher-kafka:0.8.2-4
   volumes:
   - /opt/kafka/data
   environment:
