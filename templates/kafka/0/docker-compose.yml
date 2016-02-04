@@ -1,11 +1,3 @@
-zk:
-  tty: true
-  image: rawmind/rancher-zk:3.4.6-1
-  volumes:
-  - /opt/zookeeper/data
-  environment:
-  - JVMFLAGS=-Xmx${zk_mem}m -Xms${zk_mem}m
-  - CONFD_INTERVAL=${zk_interval}
 broker:
   tty: true
   image: rawmind/rancher-kafka:0.8.2-4
@@ -14,3 +6,5 @@ broker:
   environment:
   - JVMFLAGS=-Xmx${kafka_mem}m -Xms${kafka_mem}m
   - CONFD_INTERVAL=${kafka_interval}
+  external_links:
+  - ${zk_link}:zk
