@@ -12,6 +12,8 @@
  Select Apache Zookeeper from catalog. 
  
  Enter the number of nodes, mem and refresh interval for the zk cluster. (set refresh data to 0 to disable dinamic config)
+
+ Note: When you scale the cluster, zero downtime is not guaranteed..yet..
  
  Click deploy.
  

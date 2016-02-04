@@ -1,6 +1,6 @@
 broker:
   tty: true
-  image: rawmind/rancher-kafka:0.8.2-4
+  image: rawmind/rancher-kafka:0.8.2-5
   volumes:
   - /opt/kafka/data
   environment:
