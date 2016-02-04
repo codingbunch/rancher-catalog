@@ -30,6 +30,12 @@
       required: true
       default: 256
       type: "int"
+    - variable: "work_volume"
+      description: "Host work volume to save goserver data"
+      label: "Work volume:"
+      required: true
+      default: "/var/lib/docker/go-server-work"
+      type: "string"
 gocd-server:
   scale: 1
   health_check:
