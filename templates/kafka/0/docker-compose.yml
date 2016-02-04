@@ -6,5 +6,6 @@ broker:
   environment:
   - JVMFLAGS=-Xmx${kafka_mem}m -Xms${kafka_mem}m
   - CONFD_INTERVAL=${kafka_interval}
+  - ZK_SERVICE=${zk_link}
   external_links:
   - ${zk_link}:zk
