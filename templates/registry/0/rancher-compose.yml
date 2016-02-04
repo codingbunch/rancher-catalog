@@ -18,12 +18,6 @@
       required: true
       default: "/zpool-docker/volumes/registry-www"
       type: "string"
-    - variable: "config_volume"
-      description: "Host volume to save nginx configuration"
-      label: "Config volume:"
-      required: true
-      default: "/zpool-docker/volumes/registry-nginx"
-      type: "string"
 registry:
   health_check:
     port: 80

@@ -1,9 +1,8 @@
 registry:
-  image: rawmind/rancher-nginx:0.0.1-1
+  image: rawmind/rancher-nginx:0.0.2-1
   links:
     - docker-registry:docker-registry
   volumes:
-    - ${config_volume}:/etc/nginx/conf.d
     - ${static_volume}:/www
 
 docker-registry:
