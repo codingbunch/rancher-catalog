@@ -20,14 +20,15 @@
       default: 1024 
       type: "string"
     - variable: "kafka_interval"
-      description: "Interval to poll/apply configuration changes. 0 to disable, reconfiguration will be done when you restart broker nodes"
-      label: "Kafka Interval (s):"
+      description: "Interval to poll/apply configuration changes. 0 to disable" 
+      label: "Broker Interval (s):"
       required: true
       default: 60 
       type: "int"
     - variable: "zk_link"
       description: |
-        stack/service link or external service link to zk cluster.
+        Choose the Zookeeper service to use. 
+        It's really recommended a dedicated zookeeper service just for Kafka.
       label: "Zookeeper stack/service"
       default: "kafka-zk/zk"
       required: true
