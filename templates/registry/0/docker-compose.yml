@@ -1,10 +1,3 @@
-registry:
-  image: rawmind/rancher-nginx:0.0.2-1
-  links:
-    - docker-registry:docker-registry
-  volumes:
-    - ${static_volume}:/www
-
 docker-registry:
   image: registry:2.2.1
   environment:
