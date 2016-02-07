@@ -19,18 +19,6 @@
       required: true
       default: 1024
       type: "int"
-    - variable: "perm_initial"
-      description: "Initial permgen memory in Mb"
-      label: "Initial permgen memory:"
-      required: true
-      default: 128
-      type: "int"
-    - variable: "perm_max"
-      description: "Max permgen memory in Mb"
-      label: "Max permgen memory:"
-      required: true
-      default: 256
-      type: "int"
     - variable: "work_volume"
       description: "Host work volume to save goserver data"
       label: "Work volume:"

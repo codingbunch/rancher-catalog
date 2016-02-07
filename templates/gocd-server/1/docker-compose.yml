@@ -9,5 +9,3 @@ gocd-server:
   environment:
   - SERVER_MEM=${mem_initial}m
   - SERVER_MAX_MEM=${mem_max}m
-  - SERVER_MIN_PERM_GEN=${perm_initial}m
-  - SERVER_MAX_PERM_GEN=${perm_max}m
