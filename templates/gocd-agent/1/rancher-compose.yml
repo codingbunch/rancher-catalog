@@ -20,11 +20,12 @@
       default: 1024
       type: "int"
     - variable: "goserver_ip"
-      description: "Gocd server ip"
-      label: "Goserver ip:"
+      description: |
+        Choose the gocd service to connect. 
+      label: "Gocd server stack/service"
+      default: "gocd-sever/gocd-server"
       required: true
-      default: "gocd"
-      type: "string"
+      type: "service"
     - variable: "goserver_port"
       description: "Gocd server port"
       label: "Goserver port:"
