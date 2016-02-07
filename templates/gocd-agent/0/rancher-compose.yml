@@ -3,7 +3,8 @@
   version: 15.3.1-rancher1
   description: |
     (Experimental) Gocd agent.
-  minimum_rancher_version: v0.47.0
+  maintainer: "Raul Sanchez <rawmind@gmail.com>"
+  minimum_rancher_version: v0.56.0
   uuid: goagent-0
   questions:
     - variable: "mem_initial"

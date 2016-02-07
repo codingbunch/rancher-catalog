@@ -1,8 +1,8 @@
 name: gocd-agent
 description: |
   (Experimental) Gocd agent
-version: 15.3.1-rancher1
+version: 16.1.0-rancher1
 category: "Continuous Integration"
-release by: Raul Sanchez
-requires: rancher-0.47.0
+maintainer: "Raul Sanchez <rawmind@gmail.com>"
+minimum_rancher_version: v0.56.0
 license: 
