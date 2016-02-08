@@ -1,4 +1,4 @@
-name: Vamp
+name: Vamp gateway agent
 description: |
   (Experimental) Vamp core
 version: 0.8.2-rancher1
