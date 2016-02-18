@@ -1,11 +1,14 @@
 broker:
   tty: true
-  image: rawmind/rancher-kafka:0.8.2-6
+  image: rawmind/rancher-kafka:0.9.0
   volumes:
   - /opt/kafka/data
   environment:
   - JVMFLAGS=-Xmx${kafka_mem}m -Xms${kafka_mem}m
   - CONFD_INTERVAL=${kafka_interval}
   - ZK_SERVICE=${zk_link}
+  - KAFKA_ADVERTISE_IP=${kafka_advertise_ip}
   external_links:
   - ${zk_link}:zk
+  labels:
+    io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
