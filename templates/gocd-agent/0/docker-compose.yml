@@ -9,5 +9,5 @@ gocd-agent:
   environment:
   - AGENT_MEM=${mem_initial}m
   - AGENT_MAX_MEM=${mem_max}m
-  - GO_SERVER=gocd-server
+  - GO_SERVER=gocd-server.rancher.internal
   - GO_SERVER_PORT=${goserver_port}
