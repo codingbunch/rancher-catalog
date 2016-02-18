@@ -3,7 +3,7 @@
   version: 0.9.0-rancher1
   description: |
     (Experimental) Apache Kafka cluster.
-  minimum_rancher_version: v0.56.0
+  minimum_rancher_version: v0.59.0
   maintainer: "Raul Sanchez <rawmind@gmail.com>"
   uuid: kafka-0
   questions:
@@ -33,8 +33,19 @@
       default: "kafka-zk/zk"
       required: true
       type: "service"
+    - variable: kafka_advertise_ip
+      label: "Ip to advertise to zookeeper"
+      description: |
+        Choose the ip to advertise to zookeeper. Docker private ip or host public ip.
+      default: private
+      required: true
+      type: enum
+      options:
+        - private
+        - public
 broker:
   scale: ${kafka_scale}
+  retain_ip: true
   health_check:
     port: 9092
     interval: 5000

@@ -3,7 +3,7 @@
   version: 3.4.6-rancher1
   description: |
     (Experimental) Apache Zookeeper cluster.
-  minimum_rancher_version: v0.56.0
+  minimum_rancher_version: v0.59.0
   maintainer: "Raul Sanchez <rawmind@gmail.com>"
   uuid: zk-0
   questions:
@@ -27,6 +27,7 @@
       type: "int"
 zk:
   scale: ${zk_scale}
+  retain_ip: true
   health_check:
     port: 2181
     interval: 5000

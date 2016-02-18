@@ -3,13 +3,14 @@
 ### Info:
 
  This template creates and configure a gocd server instance.
- 
+
+ You can add a local or a convoy-gluster volume to retain gocd-server data. 
  
 ### Usage:
 
  Select gocd-server from catalog. 
  
- Enter in the number of nodes for the zookeeper cluster. This should be an odd number.
+ Enter the mem parameters, volume and volume driver.
  
  Click deploy.
  

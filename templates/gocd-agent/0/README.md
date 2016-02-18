@@ -9,7 +9,7 @@
 
  Select gocd-agent from catalog. 
  
- Enter in the number of nodes for the zookeeper cluster. 
+ Enter the mem parameters, gocd-server stack/service and port.
  
  Click deploy.
  

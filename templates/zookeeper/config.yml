@@ -4,5 +4,5 @@ description: |
 version: 3.4.6-rancher1
 category: clustering
 maintainer: "Raul Sanchez <rawmind@gmail.com>"
-minimum_rancher_version: v0.56.0
+minimum_rancher_version: v0.59.0
 license: 

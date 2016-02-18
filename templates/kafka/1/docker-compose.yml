@@ -7,5 +7,6 @@ broker:
   - JVMFLAGS=-Xmx${kafka_mem}m -Xms${kafka_mem}m
   - CONFD_INTERVAL=${kafka_interval}
   - ZK_SERVICE=${zk_link}
+  - KAFKA_ADVERTISE_IP=${kafka_advertise_ip}
   external_links:
   - ${zk_link}:zk

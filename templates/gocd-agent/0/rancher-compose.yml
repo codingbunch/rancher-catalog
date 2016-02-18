@@ -1,10 +1,10 @@
 .catalog:
   name: gocd-agent
-  version: 15.3.1-rancher1
+  version: 16.1.0-rancher1
   description: |
     (Experimental) Gocd agent.
   maintainer: "Raul Sanchez <rawmind@gmail.com>"
-  minimum_rancher_version: v0.56.0
+  minimum_rancher_version: v0.59.0
   uuid: goagent-0
   questions:
     - variable: "mem_initial"
@@ -40,3 +40,4 @@
       type: "int"
 gocd-agent:
   scale: ${scale}
+  retain_ip: true

@@ -3,7 +3,7 @@
   version: 0.8.2-rancher1
   description: |
     (Experimental) Apache Kafka cluster.
-  minimum_rancher_version: v0.56.0
+  minimum_rancher_version: v0.59.0
   maintainer: "Raul Sanchez <rawmind@gmail.com>"
   uuid: kafka-0
   questions:
@@ -35,6 +35,7 @@
       type: "service"
 broker:
   scale: ${kafka_scale}
+  retain_ip: true
   health_check:
     port: 9092
     interval: 5000
