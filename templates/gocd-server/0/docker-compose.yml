@@ -2,7 +2,7 @@ gocd-server:
   labels:
     gocd.role: server
   tty: true
-  image: rawmind/rancher-goserver:16.2.1-1
+  image: rawmind/rancher-goserver:16.2.1-2
   volumes:
   - ${volume_work}:/opt/go-server/work
   volume_driver: ${volume_driver}
