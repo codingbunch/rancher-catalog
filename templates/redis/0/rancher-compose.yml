@@ -1,16 +1,17 @@
 .catalog:
-  name: registry
-  version: 2.3.0-rancher1
+  name: redis
+  version: 3.0.5-rancher1
   description: |
-    Docker registry service
+    Redis service
+  maintainer: "Raul Sanchez <rawmind@gmail.com>"
   minimum_rancher_version: v0.59.0
-  uuid: registry-0
+  uuid: redis-0
   questions:
     - variable: "volume_data"
-      description: "Volume to persist registry images"
+      description: "Data volume to persist redis data"
       label: "Data volume:"
       required: true
-      default: "/var/lib/docker/registry-data" 
+      default: "/var/lib/docker/redis-data"
       type: "string"
     - variable: "volume_driver" 
       label: "Driver volume:"
@@ -22,21 +23,13 @@
       options:
         - local
         - convoy-gluster
-    - variable: "redis_link"
-      description: |
-        Choose the Redis service to use. 
-      label: "Redis stack/service"
-      default: "redis/master"
-      required: true
-      type: "service"
-registry:
+redis-master:
   scale: 1
   retain_ip: true
   health_check:
-    port: 5000
-    interval: 5000
+    port: 6379
+    interval: 2000
     unhealthy_threshold: 3
-    request_line: GET / HTTP/1.0
+    strategy: recreate
     healthy_threshold: 2
-    response_timeout: 5000
-
+    response_timeout: 2000

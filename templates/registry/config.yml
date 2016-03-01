@@ -1,7 +1,7 @@
 name: registry
 description: |
   Docker registry
-version: 2.2.1-rancher1
+version: 2.3.0-rancher1
 category: clustering
 release by: Raul Sanchez
 requires: rancher-0.47.0

@@ -1,0 +1,19 @@
+redis-master:
+  tty: true
+  image: rawmind/alpine-redis:3.0.5-0
+  volumes_from:
+  - redis-volume
+  labels:
+    io.rancher.container.hostname_override: container_name
+    io.rancher.sidekicks: redis-volume
+    service.redis.role: master
+redis-volume:
+  net: none
+  labels:
+    io.rancher.container.hostname_override: container_name
+    io.rancher.container.start_once: true
+  volumes:
+  - ${volume_data}:/data
+  volume_driver: ${volume_driver}
+  entrypoint: /bin/true
+  image: busybox

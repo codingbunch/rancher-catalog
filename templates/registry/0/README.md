@@ -9,6 +9,8 @@
 ### Usage:
 
  Select docker registry from catalog. 
+
+ Select redis service to link docker registry.
  
  Click deploy.
  
