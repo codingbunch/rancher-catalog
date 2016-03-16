@@ -4,7 +4,12 @@ vamp:
   external_links:
   - ${zk_link}:zookeeper
   - ${elasticsearch_link}:elasticsearch
-  labels:
-    io.rancher.container.pull_image: always
   tty: true
-  image: rawmind/rancher-vamp:0.0.1
+  image: rawmind/rancher-vamp:0.8.4
+  volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
+vamp-ui:
+  external_links:
+  - vamp:vamp
+  tty: true
+  image: rawmind/rancher-vamp-ui:0.8.4

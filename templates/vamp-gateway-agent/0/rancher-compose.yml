@@ -1,6 +1,6 @@
 .catalog:
   name: Vamp gateway agent
-  version: 0.8.2-rancher1
+  version: 0.8.4-rancher1
   description: |
     (Experimental) Vamp gateway agent (vga).
   minimum_rancher_version: v0.56.0
