@@ -1,0 +1,47 @@
+.catalog:
+  name: nexus
+  version: 2.12.1-01-rancher1
+  description: |
+    (Experimental) Nexus
+  maintainer: "Raul Sanchez <rawmind@gmail.com>"
+  minimum_rancher_version: v0.59.0
+  uuid: nexus-0
+  questions:
+    - variable: "mem_initial"
+      description: "Initial java memory in Mb"
+      label: "Initial memory:"
+      required: true
+      default: 256
+      type: "int"
+    - variable: "mem_max"
+      description: "Max java memory in Mb"
+      label: "Max memory:"
+      required: true
+      default: 768
+      type: "int"
+    - variable: "volume_work"
+      description: "Work volume to save goserver data"
+      label: "Work volume:"
+      required: true
+      default: "/var/lib/docker/nexus-work"
+      type: "string"
+    - variable: "volume_driver" 
+      label: "Driver volume:"
+      description: |
+        Choose the volume driver to use.
+      default: local
+      required: true
+      type: enum
+      options:
+        - local
+        - convoy-gluster
+nexus-server:
+  scale: 1
+  retain_ip: true
+  health_check:
+    port: 8081
+    interval: 5000
+    unhealthy_threshold: 5
+    request_line: GET /nexus HTTP/1.0
+    healthy_threshold: 2
+    response_timeout: 5000

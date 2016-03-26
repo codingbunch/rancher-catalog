@@ -1,0 +1,23 @@
+nexus-server:
+  labels:
+    nexus.role: server
+  tty: true
+  image: rawmind/alpine-nexus:2.12.1-01-1
+  volumes_from:
+  - nexus-volume
+  environment:
+  - HEAP_MIN=${mem_initial}m
+  - HEAP_MAX_MEM=${mem_max}m
+  labels:
+    io.rancher.container.hostname_override: container_name
+    io.rancher.sidekicks: gocd-volume
+nexus-volume:
+  net: none
+  labels:
+    io.rancher.container.hostname_override: container_name
+    io.rancher.container.start_once: true
+  volumes:
+  - ${volume_work}:/opt/sonatype-work/nexus
+  volume_driver: ${volume_driver}
+  entrypoint: /bin/true
+  image: busybox

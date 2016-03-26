@@ -1,0 +1,8 @@
+name: nexus
+description: |
+  (Experimental) Nexus server
+version: 2.12.1-01-rancher1
+category: "Continuous Integration"
+maintainer: "Raul Sanchez <rawmind@gmail.com>"
+minimum_rancher_version: v0.59.0
+license: 
