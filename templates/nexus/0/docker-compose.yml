@@ -20,7 +20,7 @@ nexus-volume:
   - ${volume_work}:/opt/sonatype-work/nexus
   volume_driver: ${volume_driver}
   entrypoint: /bin/true
-  image: rawmind/alpine-volume:0.0.1
+  image: rawmind/alpine-volume:0.0.1-1
   environment:
   - SERVICE_USER=nexus
   - SERVICE_UID=10000
