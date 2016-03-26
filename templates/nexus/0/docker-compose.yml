@@ -10,7 +10,7 @@ nexus-server:
   - HEAP_MAX_MEM=${mem_max}m
   labels:
     io.rancher.container.hostname_override: container_name
-    io.rancher.sidekicks: gocd-volume
+    io.rancher.sidekicks: nexus-volume
 nexus-volume:
   net: none
   labels:
